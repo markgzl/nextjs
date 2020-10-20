@@ -3,9 +3,6 @@ import React from 'react'
 import App from 'next/app'
 import NProgress from 'nprogress'
 import Router from 'next/router'
-// import ScrollReveal from 'scrollreveal'
-import { isIpad } from '../utils/system'
-
 
 Router.events.on('routeChangeStart', (url) => {
   NProgress.start()
@@ -22,9 +19,7 @@ export default class MyApp extends App {
 
     return {pageProps}
   }
-
   render () {
-    console.log(isIpad)
 		const {Component, pageProps} = this.props
     return <Component {...pageProps} />
   }

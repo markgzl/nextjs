@@ -9,9 +9,9 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-					<link rel="stylesheet" href="../static/styles/reset.css"/>
-					<link rel="stylesheet" href="../static/styles/nprogress.css"/>
-          <link rel="icon" href="../static/favicon.ico"/>
+					<link rel="stylesheet" href="/static/styles/reset.css"/>
+					<link rel="stylesheet" href="/static/styles/nprogress.css"/>
+          <link rel="icon" href="/favicon.ico"/>
           <meta name="keywords" content="desc" />
           <meta name="description" content="desc" />
           <meta name="author" content="desc" />

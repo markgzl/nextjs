@@ -14,7 +14,7 @@ const renderHtml = async (APP, ctx, pagePath, params={}) => {
 const allRoutes = (app) => {
 	const router = new Router()
 	router.get('/', handleMobilePage(true),  async (ctx) => {
-		return renderHtml(app, ctx, '/index', {id: 10000})	
+		return renderHtml(app, ctx, '/pc/index', {id: 10000})	
 	})
 	router.get('/m',handleMobilePage(false), async (ctx) => {
 		return renderHtml(app, ctx, '/index', {id: 10000})	
