@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import './nav.scss'
+import { isMobile } from '../../utils/system'
 
 const Nav = () => {
+	// const navLink = isMobile(navigator.userAgent) ? '/m' : '/'
+	const [navLink, setNavLink] = useState('/')
 	var slideRight = {
 		distance: '100%',
 		origin: 'right',
@@ -17,6 +20,7 @@ const Nav = () => {
 	};
 	
 	useEffect(()=>{
+		setNavLink(isMobile(navigator.userAgent) ? '/m/' : '/')
 		const ani = ScrollReveal()
 		console.log(ani)
 		ani.reveal('.action', slideRight)
@@ -30,14 +34,14 @@ const Nav = () => {
 	return (
 		<header className='header'>
 			<div className='nav-wrap'>
-				<Link href='/'>
+				<Link href={`${navLink}`}>
 					<img src="/static/vercel.svg" alt="logo" className='logo'/>
 				</Link>
 				<nav className='nav'>
-					<Link href='/'><a className='nav-link'>首页</a></Link>
-					<Link href='/product'><a className='nav-link'>产品介绍</a></Link>
-					<Link href='/aboutus'><a className='nav-link'>关于我们</a></Link>
-					<Link href='/news'><a className='nav-link'>新闻</a></Link>
+					<Link href={`${navLink}`}><a className='nav-link'>首页</a></Link>
+					<Link href={`${navLink}product`}><a className='nav-link'>产品介绍</a></Link>
+					<Link href={`${navLink}aboutus`}><a className='nav-link'>关于我们</a></Link>
+					<Link href={`${navLink}news`}><a className='nav-link'>新闻</a></Link>
 				</nav>
 				<div className='action'>
 					预约体验

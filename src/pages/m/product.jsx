@@ -1,7 +1,3 @@
-import { NextPage } from 'next';
-
-
-
 const A = (props) => {
 	return (
 		<footer>

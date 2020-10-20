@@ -15,6 +15,7 @@ APP.prepare()
 		const server = new Koa()
 
 		server.use(bodyparser())
+
 		server.use(allRoutes(APP).routes())
 
 		// 对于未捕获的路由全部交由next.js处理
