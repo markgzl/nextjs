@@ -1,14 +1,28 @@
+import { useEffect } from 'react'
 import Footer from '../footer'
 import Nav from '../nav'
+import SEO from '../seo'
+import './index.scss'
 const LayoutPc = (props) => {
+	useEffect(()=>{
+		window.addEventListener('scroll', (e)=>{
+			console.log(e)
+		})
+		return () => {
+			window.removeEventListener('scroll', ()=>{
+
+			})
+		}
+	},[])
 	return (
-		<main>
-			<Nav></Nav>
-			<div>
+		<div className='page-wrap'>
+			<SEO title={props.title || '首页'} />
+			<div className='navigator'><Nav /></div>
+			<div className='main-content'>
 				{props.children}
 			</div>
-			<Footer></Footer>
-		</main>
+			<div className='footer'><Footer /></div>
+		</div>
 	)
 }
 

@@ -1,9 +1,11 @@
 const withSass = require('@zeit/next-sass')
+const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
     ...withSass({
 			cssModules: false,
-		}),
+    }),
+    assetPrefix: isProd ? 'https://cdn.lljy.com' : '',
 		//  纯静态可以使用下列方式 简化路由
     // async rewrites() {
     //     return [

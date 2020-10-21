@@ -1,6 +1,8 @@
+import { LayoutPc } from '@components'
+
 const NewDetail = () => {
 	return (
-		<div>NewDetail</div>
+		<LayoutPc>NewDetail</LayoutPc>
 	)
 }
 

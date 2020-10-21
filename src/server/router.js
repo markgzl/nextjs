@@ -1,4 +1,3 @@
-const  { Context } = require('koa')
 const  Router = require('koa-router')
 const { HTTP_SUCCESS_CODE } = require('./const')
 const { handleMobilePage, handleError } = require('./middleware')
@@ -13,7 +12,7 @@ const renderHtml = async (APP, ctx, pagePath, params={}) => {
 
 const allRoutes = (app) => {
 	const router = new Router()
-	// pc page routes
+	// pc page routes   index.js / .jsx 文件不需要写  默认：index
 	router.get('/', handleMobilePage(true),  async (ctx) => {
 		return renderHtml(app, ctx, '/pc', {id: 10000})	
 	})
@@ -26,6 +25,9 @@ const allRoutes = (app) => {
 	router.get('/open', handleMobilePage(true),  async (ctx) => {
 		return renderHtml(app, ctx, '/pc/open', {id: 10000})	
 	})
+	router.get('/about', handleMobilePage(true),  async (ctx) => {
+		return renderHtml(app, ctx, '/pc/about', {id: 10000})	
+	})
 	router.get('/products', handleMobilePage(true),  async (ctx) => {
 		return renderHtml(app, ctx, '/pc/products', {id: 10000})	
 	})
@@ -33,7 +35,7 @@ const allRoutes = (app) => {
 		return renderHtml(app, ctx, '/pc/service', {id: 10000})	
 	})
 	// mobile page routes
-	router.get('/m',handleMobilePage(false), async (ctx) => {
+	router.get('/m', handleMobilePage(false), async (ctx) => {
 		return renderHtml(app, ctx, '/mobile', {id: 10000})	
 	})
 	router.get('/m/news', handleMobilePage(false), async (ctx) => { 
@@ -44,6 +46,9 @@ const allRoutes = (app) => {
 	})
 	router.get('/m/open', handleMobilePage(false),  async (ctx) => {
 		return renderHtml(app, ctx, '/mobile/open', {id: 10000})	
+	})
+	router.get('/m/about', handleMobilePage(false),  async (ctx) => {
+		return renderHtml(app, ctx, '/mobile/about', {id: 10000})	
 	})
 	router.get('/m/products', handleMobilePage(false),  async (ctx) => {
 		return renderHtml(app, ctx, '/mobile/products', {id: 10000})	

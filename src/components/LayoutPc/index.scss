@@ -1,0 +1,16 @@
+.page-wrap{
+	width: 100%;
+	min-height: 100vh;
+	.navigator{
+		height: 100px;
+	}
+	.main-content{
+		min-height: calc(100vh - 160px);
+	}
+	.footer{
+		text-align: center;
+		background-color: #f2f2f2;
+		height: 60px;
+		line-height: 60px;
+	}
+}

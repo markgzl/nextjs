@@ -1,6 +1,8 @@
+import { LayoutPc } from '@components'
+
 const ServicesPage = () => {
 	return (
-		<div>ServicesPage</div>
+		<LayoutPc>ServicesPage</LayoutPc>
 	)
 }
 

@@ -1,3 +1,5 @@
+import { LayoutPc } from '@components'
+
 export default () => (
-	<div>this is news page</div>
+	<LayoutPc>this is news page</LayoutPc>
 )

@@ -1,6 +1,8 @@
+import { LayoutPc } from '@components'
+
 const OpenPage = () => {
 	return (
-		<div>OpenPage</div>
+		<LayoutPc>OpenPage</LayoutPc>
 	)
 }
 

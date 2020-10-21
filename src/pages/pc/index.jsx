@@ -1,6 +1,6 @@
 import React from 'react'
 import CountUp  from 'react-countup'
-
+import { LayoutPc } from '@components'
 
 export default class Home extends React.Component {
   static async getInitialProps({ query }) {
@@ -15,7 +15,7 @@ export default class Home extends React.Component {
     return (
       <div className="container">
         <main>
-          <div>
+          <LayoutPc>
           <CountUp
             className="account-balance"
             start={-875.039}
@@ -30,7 +30,7 @@ export default class Home extends React.Component {
             onStart={() => console.log('Started! 💨')}
           />
 
-          </div>
+          </LayoutPc>
         </main>
         <footer>
 
