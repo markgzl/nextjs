@@ -1,11 +1,7 @@
-import { NextPage } from 'next';
-
-
-
 const A = (props) => {
 	return (
 		<footer>
-			<div>this is footer . copyright @ {new Date().getFullYear()}</div>
+			<div>MA Index Page</div>
 			<p>{props.userName}</p>
 		</footer>
 	)
