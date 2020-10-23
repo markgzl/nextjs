@@ -1,0 +1,238 @@
+.zan-comp{
+	width: 100px;
+  height: 200px;
+  position: relative;
+  background-color: #f4f4f4;
+}
+.bg1{
+	position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 30px;
+  bottom: 0px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transform-origin: bottom;
+}
+.bing{
+	position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+	transform-origin: bottom;
+	bottom: 0px;
+	// animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+@for $i from 1 through 6 {
+	.bing#{$i}{
+		background-image: url('/comp/images/bg#{$i}.png');
+	}
+}
+@keyframes bubble_11 {
+  25% {
+    margin-left: -10px;
+  }
+  50% {
+    margin-left: -10px;
+  }
+  100% {
+    margin-left: -18px;
+  }
+}
+@keyframes bubble_10 {
+  25% {
+    margin-left: -20px;
+  }
+  50% {
+    margin-left: -20px;
+  }
+  100% {
+    margin-left: -20px;
+  }
+}
+@keyframes bubble_9 {
+  25% {
+    margin-left: 10px;
+  }
+  50% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 10px;
+  }
+}
+@keyframes bubble_8 {
+  25% {
+    margin-left: 20px;
+  }
+  50% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+@keyframes bubble_7 {
+  25% {
+    margin-left: 3px;
+  }
+  50% {
+    margin-left: 1px;
+  }
+  75% {
+    margin-left: 2px;
+  }
+  100% {
+    margin-left: 3px;
+  }
+}
+@keyframes bubble_6 {
+  25% {
+    margin-left: -3px;
+  }
+  50% {
+    margin-left: -1px;
+  }
+  75% {
+    margin-left: -2px;
+  }
+  100% {
+    margin-left: -3px;
+  }
+}
+@keyframes bubble_5 {
+  25% {
+    margin-left: 5px;
+  }
+  50% {
+    margin-left: -5px;
+  }
+  75% {
+    margin-left: -10px;
+  }
+  100% {
+    margin-left: -20px;
+  }
+}
+@keyframes bubble_4 {
+  25% {
+    margin-left: -5px;
+  }
+  50% {
+    margin-left: -5px;
+  }
+  75% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 10px;
+  }
+}
+@keyframes bubble_3 {
+  25% {
+    margin-left: -20px;
+  }
+  50% {
+    margin-left: 10px;
+  }
+  75% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: -10px;
+  }
+}
+@keyframes bubble_2 {
+  25% {
+    margin-left: 20px;
+  }
+  50% {
+    margin-left: 25px;
+  }
+  75% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 5px;
+  }
+}
+@keyframes bubble_1 {
+  25% {
+    margin-left: -8px;
+  }
+  50% {
+    margin-left: 8px;
+  }
+  75% {
+    margin-left: -15px;
+  }
+  100% {
+    margin-left: 15px;
+  }
+}
+@keyframes bubble_big_1 {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes bubble_big_2 {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes bubble_big_3 {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(0.6);
+  }
+}
+@keyframes bubble_y {
+  0% {
+    margin-bottom: 0;
+  }
+  10% {
+    margin-bottom: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    margin-bottom: 200px;
+    opacity: 0;
+  }
+}
+
+@for $i from 1 through 11 {
+	@if($i %3 ==0){
+		.ani#{$i} {
+			animation: bubble_#{$i} 0.5s linear 1 forwards,
+									bubble_big_3 0.5s linear  1 forwards,
+									bubble_y 0.5s linear  1 forwards;
+			}
+			@if($i %3 ==1){
+				.ani#{$i} {
+					animation: bubble_#{$i} 0.5s linear 1 forwards,
+											bubble_big_1 0.5s linear  1 forwards,
+										bubble_y 0.5s linear  1 forwards;
+			}
+			@if($i %3 ==2){
+				.ani#{$i} {
+					animation: bubble_#{$i} 0.5s linear 1 forwards,
+											bubble_big_2 0.5s linear  1 forwards,
+											bubble_y 0.5s linear  1 forwards;
+				}
+			}
+		}
+	}	
+}
+	

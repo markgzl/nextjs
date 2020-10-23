@@ -1,6 +1,6 @@
 import React from 'react'
 import CountUp  from 'react-countup'
-import { LayoutPc } from '@components'
+import { LayoutPc, MobilePower } from '@components'
 
 export default class Home extends React.Component {
   static async getInitialProps({ query }) {
@@ -30,6 +30,7 @@ export default class Home extends React.Component {
             onStart={() => console.log('Started! 💨')}
           />
 
+  <MobilePower />
           </LayoutPc>
         </main>
         <footer>
