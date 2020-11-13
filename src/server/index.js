@@ -5,7 +5,7 @@ const allRoutes = require('./router')
 // const db = require('./database')
 const { HTTP_SUCCESS_CODE } = require('./const')
 
-const port = parseInt(process.env.PORT, 10) || 7000;
+const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== "production";
 
 const APP = next({ dev, dir: './src' })
@@ -26,7 +26,7 @@ APP.prepare()
 		});
 
 		server.listen(port,()=>{
-			console.log('success on port 3000')
+			console.log(`success on port ${port}`)
 		})
 		server.on('error',(err)=>{
 			console.log(err)
